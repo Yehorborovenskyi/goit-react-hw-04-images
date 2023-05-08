@@ -38,7 +38,6 @@ export  function App() {
     async function fetchData() {
       try {
         const imagesApiService = new ImagesApiService();
-        console.log(imagesApiService)
         imagesApiService.query = search;
         const imagesObject = await imagesApiService.getImages(page);
         const hits = imagesObject.hits;
